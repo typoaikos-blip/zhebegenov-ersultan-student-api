@@ -1,0 +1,41 @@
+name: zhebegenov-ersultan-student-api
+
+services:
+  db:
+    image: postgres:16
+    container_name: zhebegenov-ersultan-db
+    environment:
+      POSTGRES_DB: studentdb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    volumes:
+      - zhebegenov-ersultan-pgdata:/var/lib/postgresql/data
+    networks:
+      - zhebegenov-ersultan-net
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d studentdb"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  app:
+    build: .
+    image: zhebegenov-ersultan-student-api:v1.0-zhebegenov-ersultan
+    container_name: zhebegenov-ersultan-app
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/studentdb
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: postgres
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - zhebegenov-ersultan-net
+
+volumes:
+  zhebegenov-ersultan-pgdata:
+
+networks:
+  zhebegenov-ersultan-net:
