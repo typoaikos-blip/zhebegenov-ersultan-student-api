@@ -1,4 +1,4 @@
-# Zhebegenov Ersultan Student API
+# Student CRUD API (Spring Boot + PostgreSQL) - Zhebegenov Ersultan
 
 ## Author
 Zhebegenov Ersultan
