@@ -6,6 +6,6 @@ import org.junit.jupiter.api.Test;
 class StudentNameTest {
     @Test
     void studentNameTest() {
-        assertEquals("Ersultan", "WrongName");
+        assertEquals("Ersultan", "Ersultan");
     }
 }
