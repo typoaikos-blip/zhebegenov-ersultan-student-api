@@ -1,0 +1,18 @@
+===== System report =====
+Student: Zhebegenov Ersultan
+Date: 2026-10-30 01:42:21
+User: xcvfp
+OS: Ubuntu 26.04.1 LTS
+Kernel: 6.18.54.1-microsoft-standard-WSL2
+--- CPU ---
+CPU(s):                                  4
+Model name:                              AMD Ryzen 3 3300U with Radeon Vega Mobile Gfx
+--- Memory ---
+               total        used        free      shared  buff/cache   available
+Mem:           2.8Gi       1.3Gi       235Mi        27Mi       1.4Gi       1.5Gi
+Swap:          1.0Gi       152Ki       1.0Gi
+--- Disk usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sdf       1007G  1.6G  955G   1% /
+Available disk space: 955G
+
