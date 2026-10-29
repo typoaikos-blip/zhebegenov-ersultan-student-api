@@ -1,4 +1,4 @@
-# Zhebegenov Ersultan Student API
+# Student API documentation by Zhebegenov Ersultan
 
 ## Author
 Zhebegenov Ersultan
